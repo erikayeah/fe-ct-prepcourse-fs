@@ -217,7 +217,7 @@ function doWhile(num) {
    do {
       veces = veces+1;
       num = num + 5;
-      
+
    }
    while (veces < 8 )
    return num;
