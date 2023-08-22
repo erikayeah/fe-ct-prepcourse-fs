@@ -65,8 +65,12 @@ function map(array, cb) {
    // Retorna el nuevo arreglo.
    // Tu código:
 
+   var newArr = array.map(cb);
+       return newArr
+   }
 
-}
+
+
 
 function filter(arrayOfStrings) {
    // Debes identificar todos los elementos el arreglo que comiencen con la letra "a".
