@@ -9,6 +9,8 @@ function mayuscula(nombre) {
    may = nombre.charAt(0).toUpperCase() + nombre.slice(1);  //nombre.slice(1) se utiliza para obtener una subcadena 
    //del nombre original que comienza desde el segundo carácter en adelante.
 
+   // Aca tambien puede ser nombre[0] para acceder a la primer letra.
+
    return may;
    
 }
@@ -45,7 +47,12 @@ function sumarArray(arrayOfNumbers, cb) {
 
       cb (suma);
    }
+//otra opcion es
+// var resultado = arrayOfNumbers.reduce(function(suma,num){
+//    return suma + num;
+// }, 0)
 
+// cb (suma);
 
 function forEach(array, cb) {
    // Recibes un arreglo y un callback.
@@ -53,9 +60,7 @@ function forEach(array, cb) {
    // Debes pasarle el elemento como argumento al callback. -> array[i]
    // Tu código:
 
-array.forEach (function(element) {
-   cb (element);
-})
+array.forEach (cb);
 }
 
 
@@ -81,7 +86,7 @@ function filter(arrayOfStrings) {
 
    for ( var i = 0 ; i < arrayOfStrings.length ; i++) {
 
-      if (arrayOfStrings[i].charAt(0) === 'a')
+      if (arrayOfStrings[i].charAt(0) === 'a') // tmb puede ser arrayOfStrings[i][0] . Es igual de valido.
       {
          nuevoArray.push(arrayOfStrings[i])
       }
@@ -89,6 +94,16 @@ function filter(arrayOfStrings) {
    return nuevoArray;
 
 }
+
+// otra forma de hacerlo con metodo filter
+
+// var nuevoArray = arrayOfStrings.filter(function(elemento){ //el elemento recibido es el de la iteracion. Usamos elemento 
+//    //reemplazaria la i del bucle for.
+//    return elemento[0] === 'a';
+// })
+
+// return nuevoArray
+
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {

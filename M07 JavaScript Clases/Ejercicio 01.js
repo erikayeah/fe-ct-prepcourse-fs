@@ -47,7 +47,18 @@ function agregarStringInvertida() {
    //    reverse() para invertir el orden de los caracteres en el arreglo,
    //    join('') para unir nuevamente los caracteres en una cadena invertida.
     }
-}
+
+    //Otra forma seria
+
+//     String.prototype.reverse = function (){
+//       var stringInvertida ='',
+
+//       for (var i = this.length - 1 ; i >= 0 ; i --) //es this.length porq no sabemos q objeto sera sentenciado aun.
+
+//       stringInvertida = stringInvertida + this.charAt(i); // voy sumando a la cadena la posicion de i que estoy itinerando.
+// return stringInvertida
+
+   }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
