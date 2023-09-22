@@ -178,6 +178,11 @@ function todosIguales(array) {
 } return false;
 }
 
+// otra forma de hacerlo es
+// return array.every(num => num === array[0])
+
+
+
 function mesesDelAño(array) {
    // El arreglo contiene algunos meses del año desordenados. Debes recorrerlo, buscar los meses "Enero",
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
